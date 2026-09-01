@@ -1,0 +1,334 @@
+<title>Ujjayini Ghosh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── deliberate single dark-editorial identity: explicit colors, no theme switching ── */
+:root{
+  --ink:#0F1420; --ink-2:#171E30; --ink-3:#1F2740;
+  --paper:#FBF9F5; --paper-ink:#1A1A18;
+  --coral:#FF5A36; --coral-soft:#3A2018;
+  --teal:#5BA391; --teal-soft:#132420;
+  --gold:#D9A441; --gold-soft:#2A2113;
+  --cream:#EDE9E0; --mute:#9AA0B4; --hair:#2B3350;
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;}
+h1,h2,h3{font-family:'Newsreader',serif;font-weight:500;margin:0;text-wrap:balance;}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);}
+.wrap{max-width:1040px;margin:0 auto;padding:0 32px;}
+section{padding:96px 0;}
+a{color:inherit;}
+img{max-width:100%;}
+
+/* HERO */
+.hero{padding:120px 0 100px;background:radial-gradient(ellipse at 80% -10%, rgba(255,90,54,.14), transparent 55%),var(--ink);}
+.hero .eyebrow{margin-bottom:22px;display:block;}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem);color:#fff;line-height:1.04;}
+.hero h1 em{color:var(--coral);font-style:italic;}
+.hero p.lede{font-size:1.25rem;color:var(--mute);max-width:640px;margin:22px 0 0;font-family:'Newsreader',serif;font-style:italic;}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:56px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
+.stat{padding:26px 20px 26px 0;border-right:1px solid var(--hair);}
+.stat:last-child{border-right:none;}
+.stat b{display:block;font-family:'Newsreader',serif;font-size:1.9rem;color:#fff;font-weight:500;}
+.stat span{font-size:.82rem;color:var(--mute);}
+
+/* PAPER (light) SECTIONS */
+.paper{background:var(--paper);color:var(--paper-ink);}
+.paper .eyebrow{color:#C4441F;}
+.paper h2{color:#12172A;}
+
+.intro-grid{display:grid;grid-template-columns:1.1fr 1.4fr;gap:56px;align-items:start;}
+.intro-grid h2{font-size:2.1rem;margin-bottom:18px;}
+.intro-grid p{font-size:1.05rem;color:#3A3A36;}
+.pillars{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px;}
+.pillars li{padding-left:26px;position:relative;font-size:.98rem;color:#3A3A36;}
+.pillars li:before{content:"—";position:absolute;left:0;color:var(--coral);}
+
+/* SECTION HEADERS */
+.sec-head{margin-bottom:52px;max-width:640px;}
+.sec-head h2{font-size:2.3rem;margin-top:14px;}
+.sec-head p{color:var(--mute);margin-top:14px;font-size:1.05rem;}
+.paper .sec-head p{color:#5B5B54;}
+
+/* FLAGSHIP CARDS */
+.flagship{display:grid;gap:24px;}
+.fcard{background:var(--ink-2);border:1px solid var(--hair);border-radius:6px;padding:34px 36px;display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:start;}
+.fcard .fig{font-family:'Newsreader',serif;font-size:2.6rem;color:var(--coral);line-height:1;}
+.fcard .fig small{display:block;font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-top:8px;font-weight:400;}
+.fcard h3{color:#fff;font-size:1.3rem;margin-bottom:10px;}
+.fcard p{color:var(--mute);font-size:.98rem;margin:0;}
+.fcard .onrequest{display:inline-block;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.04em;color:#6B7290;border:1px solid var(--hair);border-radius:999px;padding:5px 12px;}
+
+/* WRITING SAMPLES */
+.samples{display:grid;gap:0;border-top:1px solid #DDD8CC;}
+.sample{display:grid;grid-template-columns:100px 1fr auto;gap:24px;padding:26px 0;border-bottom:1px solid #DDD8CC;align-items:baseline;}
+.sample .tag{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:#C4441F;}
+.sample h4{font-family:'Newsreader',serif;font-size:1.25rem;font-weight:500;margin:0 0 6px;}
+.sample p{margin:0;color:#5B5B54;font-size:.92rem;}
+.sample a.readlink{font-family:'IBM Plex Mono',monospace;font-size:.78rem;text-decoration:none;color:#12172A;border-bottom:1px solid var(--coral);white-space:nowrap;}
+
+/* CASE STUDY GRID */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.case{background:var(--ink-2);border-radius:6px;overflow:hidden;border:1px solid var(--hair);}
+.case .band{height:6px;background:var(--coral);}
+.case.teal .band{background:var(--teal);}
+.case.gold .band{background:var(--gold);}
+.case .inner{padding:26px 24px 30px;}
+.case h4{color:#fff;font-size:1.12rem;margin-bottom:10px;}
+.case p{color:var(--mute);font-size:.92rem;margin:0 0 16px;}
+.case .metric{font-family:'Newsreader',serif;font-size:1.6rem;color:var(--coral);}
+.case.teal .metric{color:var(--teal);}
+.case.gold .metric{color:var(--gold);}
+.case .metric+span{display:block;font-size:.78rem;color:var(--mute);margin-top:2px;}
+.proof{margin-top:16px;display:flex;gap:16px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:.72rem;}
+.proof a{color:var(--mute);text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:2px;}
+.proof a:hover{color:#fff;}
+.pcard .proof a{color:var(--mute);border-bottom:1px solid var(--hair);}
+
+/* BREADTH GRID */
+.breadth{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.breadth .col h4{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:#C4441F;margin-bottom:14px;}
+.breadth .col ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;}
+.breadth .col li{font-size:.94rem;color:#3A3A36;padding-bottom:10px;border-bottom:1px solid #E3DFD3;}
+.breadth .col li b{display:block;color:#12172A;font-weight:600;}
+.breadth .col li a{font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:#C4441F;text-decoration:none;border-bottom:1px solid #C4441F;padding-bottom:1px;}
+
+/* PAID/SOCIAL */
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.pcard{border:1px solid var(--hair);border-radius:6px;padding:24px;}
+.pcard .eyebrow{margin-bottom:10px;display:block;}
+.pcard h4{color:#fff;font-size:1.05rem;margin-bottom:8px;}
+.pcard p{color:var(--mute);font-size:.9rem;margin:0;}
+
+/* SKILLS STRIP */
+.tags{display:flex;flex-wrap:wrap;gap:10px;}
+.tag-pill{font-family:'IBM Plex Mono',monospace;font-size:.78rem;padding:7px 14px;border:1px solid #D8D2C4;border-radius:999px;color:#3A3A36;}
+
+/* CLOSE */
+.close{background:var(--ink);text-align:left;}
+.close h2{font-size:clamp(2.2rem,5vw,3.2rem);color:#fff;max-width:680px;}
+.close .coral{color:var(--coral);}
+.contact-row{display:flex;gap:32px;margin-top:36px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:.9rem;color:var(--mute);}
+.contact-row a{text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:3px;}
+footer{padding:28px 0 60px;text-align:center;color:#4A5170;font-size:.78rem;font-family:'IBM Plex Mono',monospace;}
+
+@media (max-width:760px){
+  .intro-grid,.cases,.breadth,.pcards{grid-template-columns:1fr;}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .fcard{grid-template-columns:1fr;}
+  .sample{grid-template-columns:1fr;gap:8px;}
+}
+</style>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Ujjayini Ghosh</span>
+    <h1>Growth strategy,<br>written like it <em>matters</em>.</h1>
+    <p class="lede">Growth strategist with 8+ years across organic and paid channels, CRO, and full-funnel conversion strategy. Work spans Singapore, the UK, and global markets.</p>
+    <div class="stats">
+      <div class="stat"><b>8+ yrs</b><span>Content, SEO &amp; growth strategy</span></div>
+      <div class="stat"><b>7×</b><span>Conversion gap closed, blog vs. landing page</span></div>
+      <div class="stat"><b>#1</b><span>AI-search visibility, Fintech (SG)</span></div>
+      <div class="stat"><b>6-fig.</b><span>Monthly organic cash sales, zero ad spend</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap intro-grid">
+    <div>
+      <span class="eyebrow">About</span>
+      <h2>Organic, paid, and everything that converts.</h2>
+    </div>
+    <div>
+      <p>I specialise in finding the gap between traffic and revenue: the page that ranks but doesn't convert, the funnel step that silently breaks, the homepage that gets all the visits and none of the credit. My work sits at the intersection of content, technical SEO, and conversion strategy, translated into language executives can act on.</p>
+      <ul class="pillars">
+        <li>Diagnosed and closed a 7× lead-capture gap between blog and landing-page content, using a Benefits-Value-Features copywriting framework now adopted across the content team.</li>
+        <li>Traced a silent pipeline failure to 59% of a month's lead decline before it compounded, and drove the fix.</li>
+        <li>Built AI-search visibility from the ground up, taking a Fintech brand to #1 across the major AI platforms.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Flagship work</span>
+      <h2>Growth strategy &amp; CRO</h2>
+      <p>The analysis behind the numbers: where I spend most of my time, and where I do my best work.</p>
+    </div>
+    <div class="flagship">
+      <div class="fcard">
+        <div class="fig">7.15×<small>Lead capture gap</small></div>
+        <div><h3>Closing the blog-to-landing-page conversion gap</h3><p>Diagnosed why blog content out-pulled landing pages 3-to-2 on traffic but converted at a fraction of the rate, despite closing at an identical rate once a lead came in. Built a BVF copywriting framework and cluster-matched CTA routing to fix it, now the team's standard approach.</p><span class="onrequest">Full analysis available on request</span></div>
+      </div>
+      <div class="fcard">
+        <div class="fig">59%<small>Of a month's lead decline</small></div>
+        <div><h3>Tracing a silent pipeline failure</h3><p>A form-to-CRM sync was quietly rejecting submissions with no error shown: founders saw a success message, sales never saw a lead. Traced the fault to a single field mismatch, quantified its impact, and pushed through the fix that recovered the pipeline within a month.</p><span class="onrequest">Full analysis available on request</span></div>
+      </div>
+      <div class="fcard">
+        <div class="fig">60%<small>Of landing-page revenue</small></div>
+        <div><h3>The homepage revenue case</h3><p>Built the data case for why the highest-traffic page in the portfolio, and the lowest-converting, was the single highest-leverage optimisation available, modelling the lift from a measured capture-rate gap into a leadership-ready recommendation.</p><span class="onrequest">Full analysis available on request</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Writing samples</span>
+      <h2>A few pieces, picked to show range.</h2>
+      <p>One technical explainer, one competitive/decision-stage piece, one client narrative: three different registers of the same skill.</p>
+    </div>
+    <div class="samples">
+      <div class="sample">
+        <span class="tag">Sleek · SG</span>
+        <div><h4>Cost of Singapore Company Registration</h4><p>A decision-stage explainer written to answer the exact question a buyer has right before they act. It became the highest-converting blog post on the site.</p></div>
+        <a class="readlink" href="https://sleek.com/sg/resources/cost-of-singapore-company-registration/" target="_blank" rel="noopener">Read it →</a>
+      </div>
+      <div class="sample">
+        <span class="tag">Sleek · SG</span>
+        <div><h4>Cost of Singapore Tax Advisors</h4><p>Technical financial content made legible without losing accuracy, written for a reader comparing real options, not skimming for keywords.</p></div>
+        <a class="readlink" href="https://sleek.com/sg/resources/cost-of-singapore-tax-advisors/" target="_blank" rel="noopener">Read it →</a>
+      </div>
+      <div class="sample">
+        <span class="tag">Make Me Local · UK</span>
+        <div><h4>Lanes Driving School: Case Study</h4><p>A client narrative built around one number worth telling: a 128% increase in key conversion events over one year. Different register, same instinct for what a reader actually needs.</p></div>
+        <a class="readlink" href="https://makemelocal.com/who-we-are/case-study/lanes-driving-school" target="_blank" rel="noopener">Read it →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Case studies</span>
+      <h2>Projects I directed end to end.</h2>
+    </div>
+    <div class="cases">
+      <div class="case">
+        <div class="band"></div>
+        <div class="inner">
+          <h4>Bells Accountants: Brand Merger</h4>
+          <p>Directed a 3-month website consolidation and SEO-protection plan for two firms merging into one.</p>
+          <div class="metric">0%</div><span>Organic visibility lost through the transition</span>
+          <div class="proof">
+            <a href="https://makemelocal.com/who-we-are/case-study/bells-accountants-and-omer-accountants" target="_blank" rel="noopener">Case study →</a>
+            <a href="https://www.bellsaccountants.co.uk/" target="_blank" rel="noopener">Live site →</a>
+          </div>
+        </div>
+      </div>
+      <div class="case teal">
+        <div class="band"></div>
+        <div class="inner">
+          <h4>Lanes Driving School: Organic Scale</h4>
+          <p>Built a content strategy that scaled a local brand's search authority into regional relevance.</p>
+          <div class="metric">+128%</div><span>Growth in key conversion events, one year</span>
+          <div class="proof">
+            <a href="https://makemelocal.com/who-we-are/case-study/lanes-driving-school" target="_blank" rel="noopener">Case study →</a>
+          </div>
+        </div>
+      </div>
+      <div class="case gold">
+        <div class="band"></div>
+        <div class="inner">
+          <h4>Oakley House: Market Repositioning</h4>
+          <p>Shifted a multi-use venue's content from general awareness to high-value lead generation for weddings and corporate events.</p>
+          <div class="metric">919</div><span>Leads generated: 492 forms, 313 calls, 114 emails</span>
+          <div class="proof">
+            <a href="https://makemelocal.com/who-we-are/case-study/oakley-house" target="_blank" rel="noopener">Case study →</a>
+            <a href="https://www.oakleyhouse.co.uk/" target="_blank" rel="noopener">Live site →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Breadth</span>
+      <h2>Content, SEO, paid, and social—organised by function.</h2>
+    </div>
+    <div class="breadth">
+      <div class="col">
+        <h4>Content &amp; SEO</h4>
+        <ul>
+          <li><b>Thought leadership</b>Guides on marketing automation &amp; AI, and entrepreneurial financial planning, plus LinkedIn Pulse writing on CX strategy and brand identity. <a href="https://www.linkedin.com/pulse/7-effective-ways-develop-customer-experience-cx-strategy-ghosh/" target="_blank" rel="noopener">CX strategy →</a> <a href="https://www.linkedin.com/pulse/brand-identity-its-impact-consumer-behaviour-ujjayini-ghosh/" target="_blank" rel="noopener">Brand identity →</a></li>
+          <li><b>Sleek: Competitive content</b>Comparison content built to capture bottom-of-funnel, decision-stage traffic. <a href="https://sleek.com/sg/resources/sleek-vs-osome-singapore/" target="_blank" rel="noopener">Read it →</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Site &amp; brand rewrites</h4>
+        <ul>
+          <li><b>Make Me Local</b>Site-wide rewrite shifting brand voice toward a human-centric, conversion-focused authority.</li>
+          <li><b>Bells Accountants</b>Full content migration across a two-firm merger with zero visibility loss.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>AI search &amp; visibility</h4>
+        <ul>
+          <li><b>#1 ranking</b>Across the major AI-search platforms for core Fintech service queries in Singapore.</li>
+          <li><b>AI referral tracking</b>Established AI-driven traffic as a measured, tracked acquisition channel.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Paid, social &amp; PR</span>
+      <h2>Paid, social &amp; PR.</h2>
+      <p>Full-funnel strategy applied to paid acquisition, social growth, and earned media.</p>
+    </div>
+    <div class="pcards">
+      <div class="pcard">
+        <span class="eyebrow">Brainium</span><h4>60% LinkedIn growth</h4>
+        <p>Led a digital-first social transformation, alongside a video campaign that reached 32,000+ views.</p>
+        <div class="proof"><a href="https://www.linkedin.com/newsletters/brainium-beacon-6996099130838126593/" target="_blank" rel="noopener">Brainium Beacon →</a></div>
+      </div>
+      <div class="pcard">
+        <span class="eyebrow">Prestige Constructions</span><h4>Press &amp; lifecycle email</h4>
+        <p>Wrote high-authority press releases and direct-response email sequences supporting Prestige KEYS 2020, a flagship property-launch event.</p>
+        <div class="proof"><a href="https://www.prestigeconstructions.com/events/prestige-keys-2020-day-1" target="_blank" rel="noopener">Event coverage →</a></div>
+      </div>
+      <div class="pcard">
+        <span class="eyebrow">CII 7th Biz Bridge</span><h4>Paid social event scaling</h4>
+        <p>Built data-backed paid social campaigns optimised for professional engagement and high-intent event registration.</p>
+        <div class="proof"><a href="https://www.facebook.com/CII7thBizBridge/" target="_blank" rel="noopener">Event page →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="paper">
+  <div class="wrap">
+    <span class="eyebrow">Tools</span>
+    <div class="tags" style="margin-top:18px;">
+      <span class="tag-pill">Tableau</span><span class="tag-pill">Google Search Console</span><span class="tag-pill">Semrush</span>
+      <span class="tag-pill">SurferSEO</span><span class="tag-pill">SE Ranking</span><span class="tag-pill">HubSpot</span>
+      <span class="tag-pill">ChatGPT / Claude / Gemini</span><span class="tag-pill">Search Atlas</span><span class="tag-pill">WordPress &amp; CMS publishing</span>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <span class="eyebrow">Get in touch</span>
+    <h2 style="margin-top:18px;">Let's talk about what a growth strategist can do for your <span class="coral">next quarter</span>.</h2>
+    <div class="contact-row">
+      <a href="mailto:ghoshujjayini18@gmail.com">ghoshujjayini18@gmail.com</a>
+      <a href="tel:+917685894596">+91 76858 94596</a>
+      <a href="https://www.linkedin.com/in/ujjayinighosh96/" target="_blank" rel="noopener">linkedin.com/in/ujjayinighosh96</a>
+      <span>Kolkata, India</span>
+    </div>
+  </div>
+</section>
+<footer>Ujjayini Ghosh · Growth Strategist · Organic, Paid &amp; Full-Funnel CRO</footer>
